@@ -7,7 +7,7 @@
 4. Sass
 5. Typescript
 
-##Demo URL
+## Demo URL
 https://ibrahimdolapci.github.io/angular-graphql
 
 Ibrahim DOLAPCI
