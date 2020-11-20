@@ -1,0 +1,11 @@
+:host {
+  display: inline-block;
+
+  nz-tag {
+    width: 100%;
+  }
+
+  [nz-typography] {
+    margin-bottom: 0;
+  }
+}

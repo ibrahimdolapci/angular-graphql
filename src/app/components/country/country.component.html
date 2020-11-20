@@ -1,0 +1,28 @@
+<nz-descriptions nzTitle="{{country?.name}} Details" [nzColumn]="1" nzBordered>
+  <nz-descriptions-item nzTitle="Name">{{country?.name}}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Capital">{{country?.capital}}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Currency">{{country?.currency}}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Phone">{{country?.phone}}</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Languages">
+    <nz-list nzGrid>
+      <div nz-row [nzGutter]="8">
+        <div nz-col [nzSpan]="8" *ngFor="let language of country?.languages">
+          <nz-list-item>
+            <app-language [language]="language"></app-language>
+          </nz-list-item>
+        </div>
+      </div>
+    </nz-list>
+  </nz-descriptions-item>
+  <nz-descriptions-item nzTitle="States">
+    <nz-list nzGrid>
+      <div nz-row [nzGutter]="8">
+        <div nz-col [nzSpan]="12" *ngFor="let state of country?.states">
+          <nz-list-item>
+            <span class="state" nz-typography [nzEllipsis]="true">{{state.name}}</span>
+          </nz-list-item>
+        </div>
+      </div>
+    </nz-list>
+  </nz-descriptions-item>
+</nz-descriptions>

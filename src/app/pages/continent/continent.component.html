@@ -1,0 +1,29 @@
+<nz-table #countriesTable *ngIf="(countries$ | async) as countries" [nzData]="countries">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Capital</th>
+    <th>Currency</th>
+    <th>Languages</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of countriesTable.data">
+    <td>{{ country.name }}</td>
+    <td>{{ country.capital }}</td>
+    <td>{{ country.currency }}</td>
+    <td>
+      <nz-space>
+        <nz-space-item>
+          <app-language *ngFor="let language of country.languages" [language]="language"></app-language>
+        </nz-space-item>
+      </nz-space>
+    </td>
+    <td>
+      <button nz-button nzType="default" (click)="showModal(country)"><i nz-icon nzType="eye" nzTheme="outline"></i>Preview
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>
