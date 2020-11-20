@@ -7,6 +7,8 @@ import {NzDescriptionsModule} from 'ng-zorro-antd/descriptions';
 import {NzListModule} from 'ng-zorro-antd/list';
 import {NzTypographyModule} from 'ng-zorro-antd/typography';
 import {NzGridModule} from 'ng-zorro-antd/grid';
+import {NzSkeletonModule} from 'ng-zorro-antd/skeleton';
+import {NzEmptyModule} from 'ng-zorro-antd/empty';
 
 @NgModule({
   declarations: [LanguageComponent, CountryComponent],
@@ -16,7 +18,9 @@ import {NzGridModule} from 'ng-zorro-antd/grid';
     NzDescriptionsModule,
     NzTypographyModule,
     NzListModule,
-    NzGridModule
+    NzGridModule,
+    NzSkeletonModule,
+    NzEmptyModule
   ],
   exports: [LanguageComponent, CountryComponent]
 })

@@ -12,7 +12,7 @@ import {Apollo} from 'apollo-angular';
 export class CountryComponent implements OnInit, OnDestroy {
   @Input() code = '';
   country: ICountry | undefined;
-  loading = false;
+  loading = true;
   destroy = new Subject();
 
   constructor(private apollo: Apollo) {
@@ -23,6 +23,7 @@ export class CountryComponent implements OnInit, OnDestroy {
       .watchQuery<{ country: ICountry }>({query: GET_COUNTRY, variables: {code: this.code}})
       .valueChanges
       .subscribe(({loading, data}) => {
+        console.log(loading);
         this.loading = loading;
         this.country = data && data.country;
       });
