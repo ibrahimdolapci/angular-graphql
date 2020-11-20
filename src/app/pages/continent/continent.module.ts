@@ -10,7 +10,7 @@ import {ComponentsModule} from '../../components';
 import {NzModalModule} from 'ng-zorro-antd/modal';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'AF'},
+  {path: '', pathMatch: 'full', redirectTo: '/AF'},
   {path: ':continent', component: ContinentComponent}
 ];
 
